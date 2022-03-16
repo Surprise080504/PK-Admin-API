@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const dbConfig = require('./app/config/db.config');
-const appConfig = require('./app/config/app.config');
+// const dbConfig = require('./app/config/db.config');
+// const appConfig = require('./app/config/app.config');
 
-const db = require('./app/models');
+// const db = require('./app/models');
 // const Users = db.user;
 // const Role = db.role;
 
@@ -35,19 +35,19 @@ app.use('/public', express.static(__dirname + '/app/public'));
 const server = http.createServer(app);
 // const io = socketIo(server, { cors: corsOptions });
 
-db.mongoose
-  .connect(appConfig.ENVIRONMENT == 'local' ? `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}` : dbConfig.URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log('Successfully connect to MongoDB.');
-    // initial();
-  })
-  .catch(err => {
-    console.error('Connection error', err);
-    process.exit();
-  });
+// db.mongoose
+//   .connect(appConfig.ENVIRONMENT == 'local' ? `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}` : dbConfig.URL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => {
+//     console.log('Successfully connect to MongoDB.');
+//     // initial();
+//   })
+//   .catch(err => {
+//     console.error('Connection error', err);
+//     process.exit();
+//   });
 
 // function initial() {
 //   Role.estimatedDocumentCount((err, count) => {
