@@ -17,7 +17,7 @@ var http = require('http');
 // const socketIo = require('socket.io');
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://admin.purekanawholesale.com/'],
+  origin: ['http://localhost:3000', 'https://admin.purekanawholesale.com/', 'https://api.purekanawholesale.com/'],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
