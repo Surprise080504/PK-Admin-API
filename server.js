@@ -16,13 +16,19 @@ var http = require('http');
 // var fs = require('fs');
 // const socketIo = require('socket.io');
 
-const corsOptions = {
-  origin: ['http://localhost:3000', 'https://admin.purekanawholesale.com/', 'https://api.purekanawholesale.com/'],
-  // credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: ['http://localhost:3000', 'https://admin.purekanawholesale.com/', 'https://api.purekanawholesale.com/'],
+//   // credentials: true, //access-control-allow-credentials:true
+//   optionSuccessStatus: 200,
+// };
 
-app.use(cors(corsOptions));
+// app.use(function (req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//   next();
+// });
+
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
